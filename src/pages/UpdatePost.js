@@ -12,8 +12,9 @@ function usePostHooks(init) {
   // memberikan nilai pada state
   const [state, setState] = useState(init);
 
-  // componenDidMount Lifecycle
+  // componentDidMount Lifecycle
   useEffect(() => {
+    // Menampilkan alert ketika sudah component sudah di mounting
     alert(`
     Peringatan!!
     Isikan kolom field dengan nama dan kata motivasi anda.
@@ -30,15 +31,14 @@ function UpdatePost() {
 
   // useLocation() berfungsi untuk mengambil data state yang dikirim dari page sebelumnya
   const location = useLocation();
+  const history = useHistory();
+  const dispatch = useDispatch();
 
   // Membuat state dengan custom hooks yang telah dibuat
   const [state, setState] = usePostHooks({
     index: location.state.index,
     post: location.state.post
   });
-
-  const history = useHistory();
-  const dispatch = useDispatch();
 
   // Fungsi untuk menangani update pada post yang telah dibuat
   const _handleUpdatePost = e => {

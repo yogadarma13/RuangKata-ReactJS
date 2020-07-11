@@ -14,7 +14,9 @@ export default function AddPost() {
   const history = useHistory();
   const dispatch = useDispatch();
 
+  // componentDidMount
   useEffect(() => {
+    // Menampilkan alert ketika sudah component sudah di mounting
     alert(`
     Peringatan!!
     Isikan kolom field dengan nama dan kata motivasi anda.
