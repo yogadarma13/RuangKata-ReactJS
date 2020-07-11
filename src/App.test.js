@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from './App';
+import Footer from './components/Footer';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
+test("renders footer", () => {
+  const { getByText } = render(<Footer />);
+  const linkElement = getByText(/Copyright by Ruang Kata/i);
   expect(linkElement).toBeInTheDocument();
 });

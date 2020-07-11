@@ -1,0 +1,39 @@
+.navbar {
+  background-color: #3a86ff;
+  padding: 16px;
+}
+
+.navbar-container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 70%;
+  min-width: 70%;
+}
+
+.navbar-title {
+  color: white;
+  font-family: "Galada", cursive;
+}
+
+.link-title {
+  color: white;
+  text-decoration: none;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.link:active {
+  color: white;
+  text-decoration: underline;
+}

@@ -1,0 +1,29 @@
+.layout-container {
+  flex: 1;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.body-container {
+  flex: 1;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  max-width: 70%;
+  min-width: 70%;
+}
+
+.content-container {
+  flex: 1;
+  background: white;
+  padding: 16px;
+  position: relative;
+}
+
+.content-container .header {
+  color: #3a86ff;
+  margin-bottom: 8px;
+  margin-top: 0;
+}

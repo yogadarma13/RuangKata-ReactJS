@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import AddPost from './pages/AddPost';
+import UpdatePost from './pages/UpdatePost';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// Pada App.js ini menggunakan class Component yang berisikan Route setiap page
+class App extends React.Component {
+  render() {
+    return (
+      <Router>
+        <Switch>
+          {/* Route yang pertama kali dijalankan yaitu page Home */}
+          <Route exact path="/">
+            <Home />
+          </Route>
+          {/* Route untuk menuju page AddPost */}
+          <Route exact path="/add">
+            <AddPost />
+          </Route>
+          {/* Route untuk menuju page UpdatePost */}
+          <Route exact path="/update">
+            <UpdatePost />
+          </Route>
+        </Switch>
+      </Router>
+    );
+  }
 }
 
 export default App;
